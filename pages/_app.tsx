@@ -27,7 +27,6 @@ import "@/styles/main.css"
 const App = ({ Component, pageProps }: AppProps) => {
 
   const [t] = useTranslation('desc');
-  const router = useRouter()
   const path = useRouter().pathname;
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const LangMenuOpen = Boolean(anchorEl);
@@ -77,7 +76,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           position: 'fixed',
           bottom: '50px',
           right: '50px',
-          opacity: '0.5'
+          opacity: '0.5',
         }}
       >
         <GTranslateIcon />
