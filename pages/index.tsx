@@ -32,7 +32,7 @@ const Index: NextPage = () => {
     useEffect(() => {
         axios.get('https://v1.hitokoto.cn')
             .then((response) => setSentense(response['data']['hitokoto']))
-            .catch((e) => setSentense(t('request_err', { 'ns': 'global' })));
+            .catch((e) => setSentense(t('request_err', { ns: 'common' })));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
@@ -94,7 +94,7 @@ const Index: NextPage = () => {
                                 variant="outlined"
                                 onClick={() => HandleJump('https://blog.xsot.cn')}
                             >
-                                {t('blog', { 'ns': 'drawer' })}
+                                {t('blog', { ns: 'drawer' })}
                             </Button>
                         </Grid>
                         <Grid
@@ -104,7 +104,7 @@ const Index: NextPage = () => {
                                 variant="outlined"
                                 onClick={() => HandleJump('https://github.com/soxft')}
                             >
-                                {t('github', { 'ns': 'drawer' })}
+                                {t('github', { ns: 'drawer' })}
                             </Button>
                         </Grid>
                     </Grid>

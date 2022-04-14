@@ -22,7 +22,7 @@ const NotFound = () => {
             </Typography>
             <br />
             <Typography variant="h4">
-                {t('desc', { 'ns': 'not_found' })}
+                {t('desc', { ns: 'not_found' })}
             </Typography>
         </Container>
     </>
