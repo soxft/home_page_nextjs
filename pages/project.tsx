@@ -13,8 +13,9 @@ import {
 
 import Github from "@/components/github";
 import HomeLayout from '@/layout/homeLayout';
+import type { NextPage } from 'next';
 
-const Project = () => {
+const Project: NextPage = () => {
     const [err, setErr] = useState<boolean>(false);
     const [repos, setRepos] = useState<[]>([]);
     const [loading, setLoading] = useState<boolean>(true);

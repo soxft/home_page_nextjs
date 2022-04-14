@@ -1,5 +1,5 @@
 import HomeLayout from "@/layout/homeLayout";
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
