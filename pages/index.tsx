@@ -1,4 +1,4 @@
-import HomeLayOut from "@/layout/home";
+import HomeLayout from "@/layout/homeLayout";
 import { NextPage } from "next";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import React, { useEffect, useState } from "react";
@@ -44,7 +44,7 @@ const Index: NextPage = () => {
     ]
 
     return <>
-        <HomeLayOut>
+        <HomeLayout>
             <Grid
                 container
                 rowSpacing={10}
@@ -161,7 +161,7 @@ const Index: NextPage = () => {
                     </Grid>
                 </Grid>
             </Grid>
-        </HomeLayOut>
+        </HomeLayout>
     </>;
 }
 

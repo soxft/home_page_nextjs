@@ -6,6 +6,7 @@ import Head from 'next/head'
 import { appWithTranslation } from 'next-i18next'
 import { useTranslation } from "next-i18next";
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 import GTranslateIcon from '@mui/icons-material/GTranslate';
 
@@ -27,6 +28,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   const [t] = useTranslation('desc');
   const router = useRouter()
+  const path = useRouter().pathname;
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const LangMenuOpen = Boolean(anchorEl);
 
@@ -86,11 +88,24 @@ const App = ({ Component, pageProps }: AppProps) => {
         onClick={() => setAnchorEl(null)}
         anchorEl={anchorEl}
       >
-        <MenuItem onClick={() => router.push('/zh')}>简体中文</MenuItem>
-        <MenuItem onClick={() => router.push('/en')}>English</MenuItem>
+        <Link
+          href={path}
+          passHref={true}
+          locale="zh"
+        >
+          <MenuItem>简体中文</MenuItem>
+        </Link>
+        <Link
+          href={path}
+          passHref={true}
+          locale="en"
+        >
+          <MenuItem>English</MenuItem>
+        </Link>
       </Menu>
     </>
   )
 }
 
 export default appWithTranslation(App)
+
