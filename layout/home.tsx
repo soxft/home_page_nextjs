@@ -32,27 +32,35 @@ import {
 } from "@mui/material";
 
 import { useTranslation } from "next-i18next"
+import { useRouter } from 'next/router'
 
-const Home = ({ children }: { children: ReactElement }) => {
+
+type FindMe = [string, ReactElement, string][];
+type MySite = [string, ReactElement, string][];
+type Links = [string, ReactElement | string, string][];
+
+const HomeLayOut = ({ children }: { children: ReactElement }) => {
   const { t } = useTranslation('drawer');
   const [open, setOpen] = useState(false);
+  const route = useRouter();
 
   const HandleJump = (url: string) => window.open(url);
-  const HandleNavigate = (url: string) => {
+  const HandleNavigate = (url: string): void => {
     setOpen(false);
+    route.push(url);
   }
 
-  const find_me = [
+  const find_me: FindMe = [
     ['Github', <GitHubIcon key={0} />, 'https://github.com/soxft']
   ];
 
-  const my_site = [
+  const my_site: MySite = [
     ['blog', <BookIcon key={0} />, 'https://blog.xsot.cn'],
     ['openid', <CodeIcon key={1} />, 'https://9420.ltd'],
     ['timeletters', <MailIcon key={2} />, 'https://www.timeletters.cn'],
   ];
 
-  const links = [
+  const links: Links = [
     ['泽', "Z", 'https://blog.stzo.cn'],
     ['源源日记', "Y", 'https://blog.bsot.cn'],
   ];
@@ -60,7 +68,7 @@ const Home = ({ children }: { children: ReactElement }) => {
   return <>
     <AppBar
       position="fixed"
-      open={open}
+      //open={open}
       color="inherit"
     >
       <Toolbar>
@@ -131,7 +139,7 @@ const Home = ({ children }: { children: ReactElement }) => {
               <HomeIcon />
             </ListItemIcon>
             <ListItemText
-              xs={{ color: "text.secondary" }}
+              style={{ color: "text.secondary" }}
               primary={t('home')}
             />
           </ListItem>
@@ -143,7 +151,7 @@ const Home = ({ children }: { children: ReactElement }) => {
               <AccountTreeOutlinedIcon />
             </ListItemIcon>
             <ListItemText
-              xs={{ color: "text.secondary" }}
+              style={{ color: "text.secondary" }}
               primary={t('project')}
             />
           </ListItem>
@@ -155,7 +163,7 @@ const Home = ({ children }: { children: ReactElement }) => {
               <ClassOutlinedIcon />
             </ListItemIcon>
             <ListItemText
-              xs={{ color: "text.secondary" }}
+              style={{ color: "text.secondary" }}
               primary={t('about')}
             />
           </ListItem>
@@ -185,7 +193,7 @@ const Home = ({ children }: { children: ReactElement }) => {
                     {item[1]}
                   </ListItemIcon>
                   <ListItemText
-                    xs={{ color: "text.secondary" }}
+                    style={{ color: "text.secondary" }}
                     primary={t(item[0])}
                   />
                 </ListItem>
@@ -218,7 +226,7 @@ const Home = ({ children }: { children: ReactElement }) => {
                     {item[1]}
                   </ListItemIcon>
                   <ListItemText
-                    xs={{ color: "text.secondary" }}
+                    style={{ color: "text.secondary" }}
                     primary={t(item[0])}
                   />
                 </ListItem>
@@ -256,7 +264,7 @@ const Home = ({ children }: { children: ReactElement }) => {
                     }}>{item[1]}</Avatar>
                   </ListItemAvatar>
                   <ListItemText
-                    xs={{ color: "text.secondary" }}
+                    style={{ color: "text.secondary" }}
                     primary={item[0]}
                   />
                 </ListItem>
@@ -281,7 +289,7 @@ const Home = ({ children }: { children: ReactElement }) => {
           textAlign: 'center',
         }}
       >
-        <Outlet />
+        {children}
       </Container>
     </Box>
     <Typography
@@ -299,4 +307,4 @@ const Home = ({ children }: { children: ReactElement }) => {
   </>;
 }
 
-export default Home;
+export default HomeLayOut;
