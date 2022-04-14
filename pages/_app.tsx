@@ -1,14 +1,13 @@
-import type { GetStaticPropsContext } from 'next'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { appWithTranslation } from 'next-i18next'
+
+import type { Theme } from '@mui/material'
 
 import {
   useEffect,
   useMemo
 } from 'react'
-
-import type { Theme } from '@mui/material'
 
 import {
   useMediaQuery,
