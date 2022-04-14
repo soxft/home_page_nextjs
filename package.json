@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.6.1",
     "@mui/material": "^5.6.1",
+    "axios": "^0.26.1",
     "next": "12.1.5",
     "next-i18next": "^11.0.0",
     "qrcode.react": "^3.0.1",
