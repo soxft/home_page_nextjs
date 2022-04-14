@@ -2,8 +2,16 @@ body {
     background-color: #fafafa;
 }
 
+.mainAppBar {
+    background-color: #fafafa;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #303030;
+    }
+
+    .mainAppBar {
+        background-color: rgb(65, 65, 65);
     }
 }

@@ -70,6 +70,7 @@ const HomeLayOut = ({ children }: { children: ReactElement }) => {
       position="fixed"
       color="inherit"
       enableColorOnDark
+      className="mainAppBar"
     >
       <Toolbar>
         <IconButton

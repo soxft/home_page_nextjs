@@ -1608,11 +1608,6 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmmirror.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next-i18n@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npmmirror.com/next-i18n/-/next-i18n-0.0.1.tgz#bb63cb543aac8d77197927bb9ae291a059626929"
-  integrity sha512-o33S7vxL2WNST2GlO1GiakrWZEh/QF7RkSlhLehjHYohdJQJCo2c9wz1gCYLAv49qRNat4MN6Ly86DCAM5xw2g==
-
 next-i18next@^11.0.0:
   version "11.0.0"
   resolved "https://registry.npmmirror.com/next-i18next/-/next-i18next-11.0.0.tgz#2857d13c58a5ed976fe57c44286f1520b07f7c96"
