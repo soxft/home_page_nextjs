@@ -167,7 +167,7 @@ const Index: NextPage = () => {
 
 export const getStaticProps = async ({ locale }: { locale: string }) => ({
     props: {
-        ...(await serverSideTranslations(locale, ['drawer', 'home'])),
+        ...(await serverSideTranslations(locale, ['drawer', 'home', 'desc'])),
     },
 });
 

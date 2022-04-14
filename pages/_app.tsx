@@ -1,8 +1,13 @@
 import type { AppProps } from 'next/app'
+import type { Theme } from '@mui/material'
+
+import { useState } from 'react'
 import Head from 'next/head'
 import { appWithTranslation } from 'next-i18next'
+import { useTranslation } from "next-i18next";
+import { useRouter } from 'next/router'
 
-import type { Theme } from '@mui/material'
+import GTranslateIcon from '@mui/icons-material/GTranslate';
 
 import {
   useEffect,
@@ -12,11 +17,18 @@ import {
 import {
   useMediaQuery,
   createTheme,
-  ThemeProvider
+  ThemeProvider,
+  Fab,
+  Menu,
+  MenuItem,
 } from '@mui/material'
 import "@/styles/main.css"
-
 const App = ({ Component, pageProps }: AppProps) => {
+
+  const [t] = useTranslation('desc');
+  const router = useRouter()
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const LangMenuOpen = Boolean(anchorEl);
 
   // 处理暗黑模式
   const prefersDarkMode: boolean = useMediaQuery('(prefers-color-scheme: dark)');
@@ -47,11 +59,36 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
+        <title>{t('title')} - {t('subtitle')}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
+      {/* 切换语言 */}
+      <Fab
+        aria-controls="lang_menu"
+        onClick={(event) => setAnchorEl(event.currentTarget)}
+        size="small"
+        aria-label="change language"
+        sx={{
+          position: 'fixed',
+          bottom: '50px',
+          right: '50px',
+          opacity: '0.5'
+        }}
+      >
+        <GTranslateIcon />
+      </Fab>
+      <Menu
+        open={LangMenuOpen}
+        onClose={() => setAnchorEl(null)}
+        onClick={() => setAnchorEl(null)}
+        anchorEl={anchorEl}
+      >
+        <MenuItem onClick={() => router.push('/zh')}>简体中文</MenuItem>
+        <MenuItem onClick={() => router.push('/en')}>English</MenuItem>
+      </Menu>
     </>
   )
 }
