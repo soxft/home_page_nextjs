@@ -1,4 +1,4 @@
-# home_page
+# home_page_nextjs
 
 this is the source code of xsot.cn
 
