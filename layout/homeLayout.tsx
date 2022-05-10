@@ -63,6 +63,7 @@ const HomeLayOut = ({ children }: { children: ReactElement }) => {
   const links: Links = [
     ['泽', "Z", 'https://blog.stzo.cn'],
     ['源源日记', "Y", 'https://blog.bsot.cn'],
+    ["Evolution Host", "E", "https://evolution-host.com"]
   ];
 
   return <>
