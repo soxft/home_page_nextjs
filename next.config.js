@@ -5,6 +5,8 @@ const {
 } = require('./next-i18next.config');
 const nextConfig = {
   reactStrictMode: false,
+  poweredByHeader: false,
+  generateEtags: false,
   i18n,
   webpack5: true,
   webpack: (config) => {

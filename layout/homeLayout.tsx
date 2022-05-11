@@ -107,6 +107,8 @@ const HomeLayOut = ({ children }: { children: ReactElement }) => {
       <Box
         sx={{
           width: 250,
+          height: '100%',
+          overflowY: 'auto',
           bgcolor: "background.default",
         }}
         role="presentation"
