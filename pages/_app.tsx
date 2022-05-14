@@ -24,6 +24,7 @@ import {
   MenuItem,
 } from '@mui/material'
 import "@/styles/main.css"
+import Script from 'next/script'
 const App = ({ Component, pageProps }: AppProps) => {
 
   const [t] = useTranslation('desc');
@@ -63,6 +64,11 @@ const App = ({ Component, pageProps }: AppProps) => {
         <title>{t('title')} - {t('subtitle')}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Script
+        defer
+        data-domain="xsot.cn"
+        src="https://source.analytics.9420.ltd/js/script.js"
+      />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
