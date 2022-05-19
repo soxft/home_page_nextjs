@@ -41,7 +41,7 @@ type Links = [string, ReactElement | string, string][];
 
 const HomeLayOut = ({ children }: { children: ReactElement }) => {
   const { t } = useTranslation('drawer');
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
   const route = useRouter();
 
   const HandleJump = (url: string) => window.open(url);
