@@ -67,7 +67,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Script
         defer
         data-domain="xsot.cn"
-        src="https://stats.9420.ltd/stats/script.js"
+        src="https://s1.9420.ltd/script"
       />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
