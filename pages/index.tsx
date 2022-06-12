@@ -39,8 +39,8 @@ const Index: NextPage = () => {
     const my_project: MyProject = [
         ['timeletters', 'https://www.timeletters.cn', <EmailOutlinedIcon key={0} />],
         ['xopenid', 'https://9420.ltd', <CableOutlinedIcon key={1} />],
-        ['urlshorter', 'https://github.com/soxft/urlshorter', <LinkOutlinedIcon key={2} />],
-        ['busuanzi', 'https://github.com/soxft/Busuanzi', <FilterDramaOutlinedIcon key={3} />],
+        ['busuanzi', 'https://busuanzi.9420.ltd', <FilterDramaOutlinedIcon key={2} />],
+        ['urlshorter', 'https://github.com/soxft/urlshorter', <LinkOutlinedIcon key={3} />],
     ]
 
     return <>
