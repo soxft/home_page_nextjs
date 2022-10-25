@@ -7,7 +7,7 @@ export default class MyDocument extends Document {
                 <Head>
                     <link rel="icon" href="https://cdn.iirose.cn/xcsoft.jpg" />
                     <meta name="author" content="xcsoft" />
-                    <meta name="description" content="xcsoft的个人主页, 原諒我這一生 不羁放纵爱自由" />
+                    <meta name="description" content="xcsoft的个人主页, 我们都输给了那伟大的黑色" />
                     <meta name="keywords" content="xcsoft,星辰日记,soxft,xusoft" />
                 </Head>
                 <body>
