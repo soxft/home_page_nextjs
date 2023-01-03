@@ -304,6 +304,18 @@ const HomeLayOut = ({ children }: { children: ReactElement }) => {
       }}
       color="text.secondary"
     >
+      &ensp;
+      <a
+        href="https://beian.miit.gov.cn"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          color: "inherit",
+          textDecoration: "none",
+        }}
+      >
+        苏ICP备2022047771号-2
+      </a><br />
       &ensp;Copyright {new Date().getFullYear()} xcsoft All Rights Reserved.
     </Typography>
   </>;
