@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import type { ReactElement } from "react";
 
-import axios from "axios";
+import axios, { AxiosError, AxiosResponse } from "axios";
 
 import {
     Typography,
@@ -31,8 +31,8 @@ const Index: NextPage = () => {
 
     useEffect(() => {
         axios.get('https://api.xsot.cn/sentence/')
-            .then((response) => setSentense(response['data']['sentence']))
-            .catch((e) => setSentense(t('request_err', { ns: 'common' })));
+            .then((res: AxiosResponse) => setSentense(res['data']['data']['sentence']))
+            .catch((e: AxiosError) => setSentense(t('request_err', { ns: 'common' })));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
