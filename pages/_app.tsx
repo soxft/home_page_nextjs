@@ -29,7 +29,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   const [t] = useTranslation('desc');
   const path = useRouter().pathname;
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const LangMenuOpen = Boolean(anchorEl);
 
   // 处理暗黑模式
