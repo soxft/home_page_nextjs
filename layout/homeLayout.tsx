@@ -316,7 +316,7 @@ const HomeLayOut = ({ children }: { children: ReactElement }) => {
       >
         苏ICP备2022047771号-2
       </a><br />
-      &ensp;copyright {new Date().getFullYear()} xcsoft
+      &ensp;Copyright xcsoft &copy; {new Date().getFullYear()} 
     </Typography>
   </>;
 }
