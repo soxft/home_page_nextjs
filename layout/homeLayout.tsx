@@ -35,7 +35,6 @@ import {
 import {useTranslation} from "next-i18next"
 import {useRouter} from 'next/router'
 
-
 type FindMe = [string, ReactElement, string][];
 type MySite = [string, ReactElement, string][];
 type Links = [string, ReactElement | string, string][];
