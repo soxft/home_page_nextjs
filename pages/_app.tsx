@@ -61,7 +61,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>{t('title')} - {t('subtitle')}</title>
+        <title>{`${t('title')} - ${t('subtitle')}`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Script
