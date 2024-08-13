@@ -66,8 +66,8 @@ const App = ({ Component, pageProps }: AppProps) => {
       </Head>
       <Script
         defer
-        data-domain="xsot.cn"
-        src="https://s1.9420.ltd/script"
+        src="https://um.cmds.run/script.js"
+        data-website-id="df489e09-39ab-4efd-b39f-6529c59bde5d"
       />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
