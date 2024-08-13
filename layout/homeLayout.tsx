@@ -4,7 +4,7 @@ import type {ReactElement} from "react";
 // ICON start
 import MenuIcon from '@mui/icons-material/Menu';
 import MailIcon from '@mui/icons-material/MailOutline';
-import NullChatGPTIcon from '@mui/icons-material/QuestionAnswer';
+//import NullChatGPTIcon from '@mui/icons-material/QuestionAnswer';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import BookIcon from '@mui/icons-material/BookOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -58,7 +58,7 @@ const HomeLayOut = ({children}: { children: ReactElement }) => {
     ['blog', <BookIcon key={0} />, 'https://blog.xsot.cn'],
     ['openid', <CodeIcon key={1} />, 'https://9420.ltd'],
     ['timeletters', <MailIcon key={2} />, 'https://www.timeletters.cn'],
-    ['nullchatgpt', <NullChatGPTIcon key={3} />, 'https://www.nullchatgpt.com'],
+    //['nullchatgpt', <NullChatGPTIcon key={3} />, 'https://www.nullchatgpt.com'],
   ];
 
     const links: Links = [
