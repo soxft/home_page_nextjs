@@ -89,6 +89,8 @@ const Project: NextPage = () => {
                                         })
                                         :
                                         repos.map((repo: any, index: number) => {
+                                            if (repo.fork) return null;
+                                            
                                             return <Grid
                                                 key={index}
                                                 item

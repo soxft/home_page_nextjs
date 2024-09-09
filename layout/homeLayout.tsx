@@ -51,14 +51,15 @@ const HomeLayOut = ({children}: { children: ReactElement }) => {
     }
 
     const find_me: FindMe = [
-        ['Github', <GitHubIcon key={0}/>, 'https://github.com/soxft']
+        ['Github', <GitHubIcon key={0}/>, 'https://github.com/soxft'],
+        ['mail', <MailIcon key={0}/>, 'mailto:contact@xcsoft.top'],
     ];
 
   const my_site: MySite = [
     ['blog', <BookIcon key={0} />, 'https://blog.xsot.cn'],
     ['openid', <CodeIcon key={1} />, 'https://9420.ltd'],
     ['timeletters', <MailIcon key={2} />, 'https://www.timeletters.cn'],
-    ['whois', <NetworkCheckOutlined key={3} />, 'https://whois.cmds.run'],
+    ['Whois', <NetworkCheckOutlined key={3} />, 'https://whois.cmds.run'],
   ];
 
     const links: Links = [

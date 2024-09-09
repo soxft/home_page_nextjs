@@ -143,7 +143,7 @@ const Github = (props: GithubProps): ReactElement => {
                             fontWeight={200}
                             color="text.secondary"
                         >
-                            {props.desc}
+                            {props.desc || 'No description yet'}
                         </Typography>
                     </Grid>
                     {/* language */}

@@ -54,6 +54,21 @@ const App = ({ Component, pageProps }: AppProps) => {
             disabled: !prefersDarkMode ? 'rgba(0, 0, 0, 0.38)' : 'rgba(255, 255, 255, 0.5)',
           },
         },
+        typography: {
+          fontFamily: [
+            'LXGW WenKai Screen',
+            '-apple-system',
+            'BlinkMacSystemFont',
+            '"Segoe UI"',
+            'Roboto',
+            '"Helvetica Neue"',
+            'Arial',
+            'sans-serif',
+            '"Apple Color Emoji"',
+            '"Segoe UI Emoji"',
+            '"Segoe UI Symbol"',
+          ].join(','),
+        },
       }),
     [prefersDarkMode],
   );
