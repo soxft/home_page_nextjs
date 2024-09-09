@@ -4,7 +4,6 @@ import type {ReactElement} from "react";
 // ICON start
 import MenuIcon from '@mui/icons-material/Menu';
 import MailIcon from '@mui/icons-material/MailOutline';
-//import NullChatGPTIcon from '@mui/icons-material/QuestionAnswer';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import BookIcon from '@mui/icons-material/BookOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -12,6 +11,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import HomeIcon from '@mui/icons-material/Home';
 import ClassOutlinedIcon from '@mui/icons-material/ClassOutlined';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
+import NetworkCheckOutlined from "@mui/icons-material/NetworkCheckOutlined";
 // ICON end
 
 import {
@@ -58,7 +58,7 @@ const HomeLayOut = ({children}: { children: ReactElement }) => {
     ['blog', <BookIcon key={0} />, 'https://blog.xsot.cn'],
     ['openid', <CodeIcon key={1} />, 'https://9420.ltd'],
     ['timeletters', <MailIcon key={2} />, 'https://www.timeletters.cn'],
-    //['nullchatgpt', <NullChatGPTIcon key={3} />, 'https://www.nullchatgpt.com'],
+    ['whois', <NetworkCheckOutlined key={3} />, 'https://whois.cmds.run'],
   ];
 
     const links: Links = [
@@ -317,7 +317,7 @@ const HomeLayOut = ({children}: { children: ReactElement }) => {
             >
                 苏ICP备 2022047771号-2
             </a>
-            &emsp;
+            &ensp;&&ensp; 
             <a
                 href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32061202001303"
                 target="_blank"
