@@ -8,8 +8,9 @@
     "project": "Project",
     "about": "About",
     "timeletters": "Timeletters",
-    "nullchatgpt": "NullChatGPT",
     "openid": "OpenID",
+    "whois": "Whois",
+    "gallery": "Gallery",
     "blog": "My Blog",
     "github": "Github"
 }

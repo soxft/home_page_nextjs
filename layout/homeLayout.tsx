@@ -12,6 +12,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import ClassOutlinedIcon from '@mui/icons-material/ClassOutlined';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import NetworkCheckOutlined from "@mui/icons-material/NetworkCheckOutlined";
+import CollectionsIcon from '@mui/icons-material/Collections';
 // ICON end
 
 import {
@@ -31,6 +32,7 @@ import {
     ListItemAvatar,
     Container,
 } from "@mui/material";
+
 
 import {useTranslation} from "next-i18next"
 import {useRouter} from 'next/router'
@@ -57,9 +59,10 @@ const HomeLayOut = ({children}: { children: ReactElement }) => {
 
   const my_site: MySite = [
     ['blog', <BookIcon key={0} />, 'https://blog.xsot.cn'],
-    ['openid', <CodeIcon key={1} />, 'https://9420.ltd'],
     ['timeletters', <MailIcon key={2} />, 'https://www.timeletters.cn'],
-    ['Whois', <NetworkCheckOutlined key={3} />, 'https://whois.cmds.run'],
+    ['gallery', <CollectionsIcon key={1} />, 'https://gallery.xsot.cn'],
+    ['openid', <CodeIcon key={1} />, 'https://9420.ltd'],
+    ['whois', <NetworkCheckOutlined key={3} />, 'https://whois.cmds.run'],
   ];
 
     const links: Links = [

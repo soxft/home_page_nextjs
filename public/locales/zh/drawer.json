@@ -8,8 +8,9 @@
     "project": "项目",
     "about": "关于",
     "timeletters": "拾光",
-    "nullchatgpt": "某不知名AI",
     "openid": "OpenID",
+    "whois": "Whois",
+    "gallery": "画廊",
     "blog": "星辰日记",
     "github": "Github"
 }
